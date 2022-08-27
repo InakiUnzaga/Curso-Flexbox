@@ -16,16 +16,21 @@
         ------flex flow-----
         shortcut de flex-direction y flex-wrap
         -----justify content-----
-        define la alineacion de los elementos hijos, respecto del eje principal:
+        define la alineacion de los elementos hijos, respecto del eje principal(main axies):
         flex-start|center|flex-end|space-between| space-around|space evenly
         ------ aling-items ------
+        define la alineación de los hijos en el eje transversal (cross axies), dentro de cada linea
         strech|flex-start|flex-end|center|baseline
+        ------- aling-content ---------
+        se usa wrap
+        define la alineacion de los hijos en el eje transfversal (cross axies), no funciona cuando los hijos estan en una sola linea 
+        flex-start|flex-end|center|space-berween|space-around|space-evenly
         */
-        *,
-        *::after,
-        *::before{
-            box-sizing: border-box;
-        }
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+      }
       .container {
         background-color: #333;
         height: 30vh;
@@ -33,16 +38,19 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap-reverse;
-        flex-flow: row nowrap;
+
+        flex-flow: row wrap;
         justify-content: flex-start;
         align-items: flex-start;
+        align-content: space-around;
+        
       }
       .item {
         border: medium solid #999;
-        /* width: 20%; 
-       
-        height: 20%; */
-       
+        width: 20%;
+
+        height: 20%;
+
         background-color: #666;
       }
     </style>
@@ -59,27 +67,27 @@
       <article class="item">Flex item 2</article>
       <article class="item">Flex item 3</article>
     </section>
-    <br><br>
+    <br /><br />
     <section class="container">
-        <article class="item">item 1</article>
-        <article class="item">item 2</article>
-        <article class="item">item 3</article>
-        <article class="item">item 4</article>
-        <article class="item">item 5</article>
-        <article class="item">item 6</article>
-        <article class="item">item 7</article>
-        <article class="item">item 8</article>
-        <article class="item">item 9</article>
-        <article class="item">item 10</article>
-        <article class="item">item 11</article>
-        <article class="item">item 12</article>
-        <article class="item">item 13</article>
-        <article class="item">item 14</article>
-        <article class="item">item 15</article>
-        <article class="item">item 16</article>
-        <article class="item">item 17</article>
-        <article class="item">item 18</article>
-        <article class="item">item 19</article>
+      <article class="item">item 1</article>
+      <article class="item">item 2</article>
+      <article class="item">item 3</article>
+      <article class="item">item 4</article>
+      <article class="item">item 5</article>
+      <article class="item">item 6</article>
+      <article class="item">item 7</article>
+      <article class="item">item 8</article>
+      <article class="item">item 9</article>
+      <article class="item">item 10</article>
+      <article class="item">item 11</article>
+      <article class="item">item 12</article>
+      <article class="item">item 13</article>
+      <article class="item">item 14</article>
+      <article class="item">item 15</article>
+      <article class="item">item 16</article>
+      <article class="item">item 17</article>
+      <article class="item">item 18</article>
+      <article class="item">item 19</article>
     </section>
   </body>
 </html>
